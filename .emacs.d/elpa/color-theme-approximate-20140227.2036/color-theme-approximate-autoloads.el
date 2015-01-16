@@ -4,7 +4,7 @@
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
 ;;;### (autoloads nil "color-theme-approximate" "color-theme-approximate.el"
-;;;;;;  (21686 38178 0 0))
+;;;;;;  (21688 55324 394006 50000))
 ;;; Generated autoloads from color-theme-approximate.el
 
 (autoload 'color-theme-approximate-on "color-theme-approximate" "\

@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("hl-indent.el") (21687 61863 42000 0))
+;;;### (autoloads nil nil ("hl-indent.el") (21688 55327 289315 378000))
 
 ;;;***
 

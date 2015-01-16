@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "evil-matchit" "evil-matchit.el" (21687 18218
-;;;;;;  0 0))
+;;;### (autoloads nil "evil-matchit" "evil-matchit.el" (21688 55354
+;;;;;;  98704 873000))
 ;;; Generated autoloads from evil-matchit.el
 
 (autoload 'evilmi-select-items "evil-matchit" "\
@@ -70,8 +70,8 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 
 ;;;***
 
-;;;### (autoloads nil "evil-matchit-c" "evil-matchit-c.el" (21687
-;;;;;;  18218 0 0))
+;;;### (autoloads nil "evil-matchit-c" "evil-matchit-c.el" (21688
+;;;;;;  55354 88704 975000))
 ;;; Generated autoloads from evil-matchit-c.el
 
 (autoload 'evilmi-c-get-tag "evil-matchit-c" "\
@@ -87,7 +87,7 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-cmake" "evil-matchit-cmake.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 80705 56000))
 ;;; Generated autoloads from evil-matchit-cmake.el
 
 (autoload 'evilmi-cmake-get-tag "evil-matchit-cmake" "\
@@ -103,7 +103,7 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-html" "evil-matchit-html.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 77705 86000))
 ;;; Generated autoloads from evil-matchit-html.el
 
 (autoload 'evilmi-html-get-tag "evil-matchit-html" "\
@@ -119,7 +119,7 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-javascript" "evil-matchit-javascript.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 108704 772000))
 ;;; Generated autoloads from evil-matchit-javascript.el
 
 (autoload 'evilmi-javascript-get-tag "evil-matchit-javascript" "\
@@ -135,7 +135,7 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-latex" "evil-matchit-latex.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 52705 339000))
 ;;; Generated autoloads from evil-matchit-latex.el
 
 (autoload 'evilmi-latex-get-tag "evil-matchit-latex" "\
@@ -150,8 +150,8 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 
 ;;;***
 
-;;;### (autoloads nil "evil-matchit-org" "evil-matchit-org.el" (21687
-;;;;;;  18218 0 0))
+;;;### (autoloads nil "evil-matchit-org" "evil-matchit-org.el" (21688
+;;;;;;  55354 62705 238000))
 ;;; Generated autoloads from evil-matchit-org.el
 
 (autoload 'evilmi-org-get-tag "evil-matchit-org" "\
@@ -167,7 +167,7 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-python" "evil-matchit-python.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 42705 441000))
 ;;; Generated autoloads from evil-matchit-python.el
 
 (autoload 'evilmi-python-get-tag "evil-matchit-python" "\
@@ -183,7 +183,7 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-ruby" "evil-matchit-ruby.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 94704 914000))
 ;;; Generated autoloads from evil-matchit-ruby.el
 
 (autoload 'evilmi-ruby-get-tag "evil-matchit-ruby" "\
@@ -199,7 +199,7 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-script" "evil-matchit-script.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 84705 15000))
 ;;; Generated autoloads from evil-matchit-script.el
 
 (autoload 'evilmi-script-get-tag "evil-matchit-script" "\
@@ -214,8 +214,8 @@ See `evil-matchit-mode' for more information on Evil-Matchit mode.
 
 ;;;***
 
-;;;### (autoloads nil "evil-matchit-sdk" "evil-matchit-sdk.el" (21687
-;;;;;;  18218 0 0))
+;;;### (autoloads nil "evil-matchit-sdk" "evil-matchit-sdk.el" (21688
+;;;;;;  55354 103704 823000))
 ;;; Generated autoloads from evil-matchit-sdk.el
 
 (autoload 'evilmi-sdk-member "evil-matchit-sdk" "\
@@ -242,8 +242,8 @@ return '(start-point tag-info)
 
 ;;;***
 
-;;;### (autoloads nil "evil-matchit-sh" "evil-matchit-sh.el" (21687
-;;;;;;  18218 0 0))
+;;;### (autoloads nil "evil-matchit-sh" "evil-matchit-sh.el" (21688
+;;;;;;  55354 46705 400000))
 ;;; Generated autoloads from evil-matchit-sh.el
 
 (autoload 'evilmi-sh-get-tag "evil-matchit-sh" "\
@@ -259,7 +259,7 @@ return '(start-point tag-info)
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-simple" "evil-matchit-simple.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 58705 279000))
 ;;; Generated autoloads from evil-matchit-simple.el
 
 (autoload 'evilmi-simple-get-tag "evil-matchit-simple" "\
@@ -275,7 +275,7 @@ return '(start-point tag-info)
 ;;;***
 
 ;;;### (autoloads nil "evil-matchit-template" "evil-matchit-template.el"
-;;;;;;  (21687 18218 0 0))
+;;;;;;  (21688 55354 66705 198000))
 ;;; Generated autoloads from evil-matchit-template.el
 
 (autoload 'evilmi-template-get-tag "evil-matchit-template" "\
@@ -290,8 +290,8 @@ return '(start-point tag-info)
 
 ;;;***
 
-;;;### (autoloads nil nil ("evil-matchit-pkg.el") (21687 18218 810000
-;;;;;;  0))
+;;;### (autoloads nil nil ("evil-matchit-pkg.el") (21688 55354 119039
+;;;;;;  996000))
 
 ;;;***
 

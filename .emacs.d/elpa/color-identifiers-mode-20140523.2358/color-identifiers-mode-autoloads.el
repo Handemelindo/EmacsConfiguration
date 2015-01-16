@@ -4,7 +4,7 @@
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
 ;;;### (autoloads nil "color-identifiers-mode" "color-identifiers-mode.el"
-;;;;;;  (21687 22348 0 0))
+;;;;;;  (21688 55325 806991 724000))
 ;;; Generated autoloads from color-identifiers-mode.el
 
 (autoload 'color-identifiers-mode "color-identifiers-mode" "\
