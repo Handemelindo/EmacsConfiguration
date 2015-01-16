@@ -1,12 +1,10 @@
 ;; package source
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
-  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(require 'package)
+(package-initialize)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 ;  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-  )
 (package-initialize)
 (defun require-package (package)
   (setq-default highlight-tabs t)
@@ -16,13 +14,37 @@
       (package-refresh-contents))
     (package-install package)))
 
-;;adjust terminal color
+;; "after" macro definition
+(if (fboundp 'with-eval-after-load)
+    (defmacro after (feature &rest body)
+      "After FEATURE is loaded, evaluate BODY."
+      (declare (indent defun))
+      `(with-eval-after-load ,feature ,@body))
+  (defmacro after (feature &rest body)
+    "After FEATURE is loaded, evaluate BODY."
+    (declare (indent defun))
+    `(eval-after-load ,feature
+       '(progn ,@body))))
+
+;; adjust terminal color
 (color-theme-approximate-on)
+
+;; turn background darker
+(when (display-graphic-p)
+  (set-background-color "darkgrey"))
 
 ;; molokai theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (setq molokai-theme-kit t)
 
+;; c-k and c-j for scrolling
+;(define-key evil-normal-state-map (kbd "C-k") (lambda ()
+;						(interactive)
+;						(evil-scroll-up nil)))
+;
+;(define-key evil-normal-state-map (kbd "C-j") (lambda ()
+;						(interactive)
+;						(evil-scroll-down nil)))
 ;; evil mode
 (require 'evil)
 (evil-mode 1)
@@ -83,9 +105,9 @@
   "e" 'find-file)
 
 ;; acer jumper
-(evil-leader/set-key "e" 'evil-ace-jump-word-mode) ; ,e for Ace Jump (word)
-(evil-leader/set-key "l" 'evil-ace-jump-line-mode) ; ,l for Ace Jump (line)
-(evil-leader/set-key "x" 'evil-ace-jump-char-mode) ; ,x for Ace Jump (char)
+(evil-leader/set-key "w" 'evil-ace-jump-word-mode) ; ,e for Ace Jump (word)
+(evil-leader/set-key "j" 'evil-ace-jump-line-mode) ; ,l for Ace Jump (line)
+(evil-leader/set-key "l" 'evil-ace-jump-char-mode) ; ,x for Ace Jump (char)
 
 ;; powerline
 (require 'powerline)
@@ -109,6 +131,10 @@
 			     (fci-mode)
 			     (set-fill-column 94)))
 
+(add-hook 'haskell-mode-hook (lambda ()
+			       (fci-mode)
+			       (set-fill-column 94)))
+
 ;; disable backup files
 (setq make-backup-files nil)
 
@@ -116,35 +142,45 @@
 (scroll-bar-mode 1)
 
 ;; color identifiers
-(package 'color-identifiers-mode)
+(require-package 'color-identifiers-mode)
 (global-color-identifiers-mode)
 
+;; hl current line
+(global-hl-line-mode)
+
+;; hl indent
+(global-hl-indent-mode)
+
+;; deminish
+(require-package 'diminish)
+(diminish 'color-identifiers-mode)
+
 ;; rainbow delimiters (different color for nested delimiters)
-(pacakge 'rainbow-delimiters)
+(require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; flycheck
-(package 'flycheck)
-(add-hook 'after-init-hook #'global-flycheck-mode)
-
-(after 'flycheck
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers))
-  (setq flycheck-checkers (delq 'html-tidy flycheck-checkers))
-  (setq flycheck-standard-error-navigation nil))
-
-(global-flycheck-mode t)
-
-;; flycheck errors on a tooltip (doesnt work on console)
-(when (display-graphic-p (selected-frame))
-  (eval-after-load 'flycheck
-    '(custom-set-variables
-      '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages))))
-
-;; smooth scrolling
-(setq scroll-margin 5
-scroll-conservatively 9999
-scroll-step 1)
+;(package 'flycheck)
+;(add-hook 'after-init-hook #'global-flycheck-mode)
+;
+;(after 'flycheck
+;  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;  (setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers))
+;  (setq flycheck-checkers (delq 'html-tidy flycheck-checkers))
+;  (setq flycheck-standard-error-navigation nil))
+;
+;(global-flycheck-mode t)
+;
+;;; flycheck errors on a tooltip (doesnt work on console)
+;(when (display-graphic-p (selected-frame))
+;  (eval-after-load 'flycheck
+;    '(custom-set-variables
+;      '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages))))
+;
+;;; smooth scrolling
+;(setq scroll-margin 5
+;scroll-conservatively 9999
+;scroll-step 1)
 
 ;; relative-line-numbers
 (add-hook 'prog-mode-hook 'relative-line-numbers-mode t)
@@ -162,7 +198,7 @@ scroll-step 1)
 (setq helm-buffers-fuzzy-matching t)
 
 (after 'projectile
-  (package 'helm-projectile))
+  (require-package 'helm-projectile))
 (global-set-key (kbd "M-x") 'helm-M-x)
 
 (defun helm-my-buffers ()
