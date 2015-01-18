@@ -28,4 +28,6 @@
 ;; flycheck using lintr
 (load "~/.emacs.d/checkers/lintr.el")
 
+;; todo dictionary for mispelling
+
 (provide 'init-static-checker)

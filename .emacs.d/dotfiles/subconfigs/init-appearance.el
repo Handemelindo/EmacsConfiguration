@@ -8,20 +8,28 @@
 
 ;; cyborgpunk theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'cyberpunk)
 ;; (setq molokai-theme-kit t)
 
 ;; color identifiers
 (require-package 'color-identifiers-mode)
 (global-color-identifiers-mode)
 
-;; hl current line
+;; highlight current line
 (require-package 'hl-line)
 (global-hl-line-mode)
 
-;; hl indent
-(require-package 'hl-indent)
-(require 'hl-indent)
-(hl-indent-mode)
+;; highlight indent
+(require-package 'indent-guide)
+(require 'indent-guide)
+(indent-guide-global-mode)
+
+;; guess indentation to keep a consistent coding style with the file itself
+(require-package 'dtrt-indent)
+(dtrt-indent-mode 1)
+
+;; highlight tabs
+(setq-default highlight-tabs t)
 
 ;; deminish
 (require-package 'diminish)
@@ -38,25 +46,32 @@
 (add-hook 'text-mode-hok (lambda ()
 			   (turn-on-auto-fill)
 			   (fci-mode)
-			   (set-fill-column 82)))
+			   (set-fill-column 100)))
 (add-hook 'scala-mode-hook (lambda ()
 			     (fci-mode)
-			     (set-fill-column 94)))
+			     (set-fill-column 100)))
 
 (add-hook 'haskell-mode-hook (lambda ()
 			       (fci-mode)
-			       (set-fill-column 94)))
+			       (set-fill-column 100)))
+
+(add-hook 'racket-mode-hook (lambda ()
+			       (fci-mode)
+			       (set-fill-column 100)))
 
 ;; smooth scrolling
 (require-package 'smooth-scrolling)
 (setq scroll-margin 5
-scroll-conservatively 9999
-scroll-step 1)
+    scroll-conservatively 9999
+    scroll-step 1)
 
-;; relative-line-numbers
-;(require-package 'relative-line-numbers)
-;(add-hook 'prog-mode-hook 'relative-line-numbers-mode t)
-;(add-hook 'prog-mode-hook 'line-number-mode t)
-;(add-hook 'prog-mode-hook 'column-number-mode t)
+;; popwin
+(require-package 'popwin)
+(require 'popwin)
+(popwin-mode t)
+
+;; todo fold
+;; todo hid-lines or similiar
+;; todo narrow region or similiar
 
 (provide 'init-appearance)

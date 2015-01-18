@@ -13,4 +13,7 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
 
+;; todo add killing buffer visualization
+;; todo add RSS reader
+
 (provide 'init-auxiliary)

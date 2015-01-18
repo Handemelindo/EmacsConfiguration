@@ -23,12 +23,12 @@
 (require 'init-appearance)
 (require 'init-auxiliary)
 (require 'init-evil)
-(require 'powerline)
 (require 'init-static-checker)
 (require 'init-complete)
 (require 'init-helm)
 (require 'init-org-mode)
 (require 'init-persistence)
+(require 'init-explorer)
 (require 'init-util)
 
 ;; disable backup files

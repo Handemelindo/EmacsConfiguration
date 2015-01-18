@@ -7,6 +7,13 @@
 (set-terminal-coding-system 'utf-8)
 (setq local-coding-system 'utf-8)
 
+;; key guide
+(require-package 'guide-key)
+(require 'guide-key)
+(setq guide-key/guide-key-sequence '("C-x r" "C-x 4"))
+;(setq guide-key/highlight-command-regexp "rectangle")
+(guide-key-mode 1)
+
 ;;wekatime
 ;(require-package 'wakatime-mode)
 ;(global-wakatime-mode)
