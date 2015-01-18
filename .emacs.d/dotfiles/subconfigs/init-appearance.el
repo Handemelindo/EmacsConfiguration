@@ -4,11 +4,11 @@
 
 ;; turn background darker
 (when (display-graphic-p)
-  (set-background-color "darkgrey"))
+  (invert-face 'default))
 
-;; molokai theme
+;; cyborgpunk theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(setq molokai-theme-kit t)
+;; (setq molokai-theme-kit t)
 
 ;; color identifiers
 (require-package 'color-identifiers-mode)

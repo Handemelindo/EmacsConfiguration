@@ -113,10 +113,4 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (define-key evil-normal-state-map "g8" (lambda() (interactive) (elscreen-goto 8)))
 (define-key evil-normal-state-map "g9" (lambda() (interactive) (elscreen-goto 9)))
 
-;; powerline
-(require-package 'powerline)
-(require 'powerline)
-(powerline-default-theme)
-(display-time-mode t)
-
 (provide 'init-evil)

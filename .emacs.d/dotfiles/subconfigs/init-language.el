@@ -15,6 +15,12 @@
 ;; haskell
 ; identation
 (require-package 'haskell-mode)
+; ghc-mode
+;(require-package 'ghc-mode)
+;(autoload 'ghc-init "ghc" nil t)
+;(autoload 'ghc-debug "ghc" nil t)
+;(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+; hi2
 (require-package 'hi2)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
 ; source code helpers
