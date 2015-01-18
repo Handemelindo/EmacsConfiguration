@@ -18,10 +18,10 @@
 
 (require 'init-package)
 (require 'init-language)
+(require 'init-static-checker)
 (require 'init-appearance)
 (require 'init-auxiliary)
 (require 'init-evil)
-(require 'init-static-checker)
 (require 'init-complete)
 (require 'init-helm)
 (require 'init-org-mode)

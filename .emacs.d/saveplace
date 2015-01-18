@@ -1,2 +1,12 @@
 ;;; -*- coding: utf-8 -*-
-nil
+(("c:/Users/handemelindo/AppData/Roaming/.emacs.d/dotfiles/subconfigs/"
+  (dired-filename . "c:/Users/handemelindo/AppData/Roaming/.emacs.d/dotfiles/subconfigs/init-static-checker.el"))
+ ("c:/Users/handemelindo/AppData/Roaming/.emacs.d/dotfiles/subconfigs/init-static-checker.el" . 167)
+ ("c:/Users/handemelindo/AppData/Roaming/.emacs.d/dotfiles/subconfigs/init-language.el" . 708)
+ ("c:/Users/handemelindo/AppData/Roaming/.emacs.d/dotfiles/subconfigs/init-version-control.el" . 196)
+ ("c:/r.R" . 162)
+ ("c:/haskell.hs" . 37)
+ ("c:/Users/handemelindo/AppData/Roaming/.emacs.d/dotfiles/subconfigs/init-evil.el" . 755)
+ ("c:/Users/handemelindo/Application Data/" . 104)
+ ("c:/Users/handemelindo/AppData/Roaming/.emacs.d/dotfiles/subconfigs/init-auxiliary.el" . 350)
+ ("c:/Users/handemelindo/AppData/Roaming/.emacs" . 48))

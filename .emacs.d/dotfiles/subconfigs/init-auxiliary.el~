@@ -13,4 +13,13 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
 
+;; c-k and c-j for scrolling
+(define-key evil-normal-state-map (kbd "C-k") (lambda ()
+						(interactive)
+						(evil-scroll-up nil)))
+
+(define-key evil-normal-state-map (kbd "C-j") (lambda ()
+						(interactive)
+						(evil-scroll-down nil)))
+
 (provide 'init-auxiliary)

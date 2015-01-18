@@ -13,20 +13,17 @@
 (require-package 'ess)
 
 ;; haskell
-; identation
+;; identation
 (require-package 'haskell-mode)
 (require-package 'hi2)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
-; source code helpers
+;; source code helpers
 (add-hook 'haskell-mode-hook 'haskell-auto-insert-module-template)
 (setq-default haskell-stylish-on-save t)
 (require-package 'hayoo)
-(define-key haskell-mode-map (kbd "C-c h") 'hoogle)
-(define-key haskell-mode-map (kbd "C-c o") 'open-line)
-
-;; racket
-(require-package 'racket-mode)
-
+(after-load 'haskell-mode
+  (define-key haskell-mode-map (kbd "C-c h") 'hoogle)
+  (define-key haskell-mode-map (kbd "C-c o") 'open-line))
 
 ;; markdown
 (require-package 'markdown-mode)
