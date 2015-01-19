@@ -39,6 +39,12 @@
 (setq auto-mode-alist
       (cons '("\\.\\(md\\|markdown\\)\\'" . markdown-mode) auto-mode-alist))
 
+;; todo add modern regular expression support like visual-regexp-steroids
+;; todo julia support
+;; todo ruby support
+;; todo java support
+;; todo prolog support
+;; todo io support
 ;; todo add paredit-mode
 ;; todo add structured-haskell-mode
 

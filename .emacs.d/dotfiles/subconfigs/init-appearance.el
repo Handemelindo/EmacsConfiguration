@@ -12,6 +12,10 @@
 (load-theme 'cyberpunk)
 ;; (setq molokai-theme-kit t)
 
+;; line number
+(require-package 'linum)
+(global-linum-mode t)
+
 ;; color identifiers
 (require-package 'color-identifiers-mode)
 (global-color-identifiers-mode)
@@ -71,6 +75,7 @@
 (require 'popwin)
 (popwin-mode t)
 
+;; todo add regular expression visulation like visual-regexp
 ;; todo fold
 ;; todo hid-lines or similiar
 ;; todo narrow region or similiar

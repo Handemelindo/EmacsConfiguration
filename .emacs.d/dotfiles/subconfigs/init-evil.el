@@ -94,7 +94,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (require-package 'ace-jump-mode)
 (evil-leader/set-key "w" 'evil-ace-jump-word-mode)
 (evil-leader/set-key "j" 'evil-ace-jump-line-mode)
-(evil-leader/set-key "l" 'evil-ace-jump-char-mode)
+(evil-leader/set-key "f" 'evil-ace-jump-char-mode)
 
 ;; evil tabs
 (require-package 'evil-tabs)

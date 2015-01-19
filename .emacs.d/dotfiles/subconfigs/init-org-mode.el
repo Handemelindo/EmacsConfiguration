@@ -25,6 +25,7 @@
 (require-package 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-at-item-bullet-mode t)))
 
+;; todo add evernote support
 ;; todo add org-jira
 ;; todo add org mail
 ;; todo add org for presentation
