@@ -29,6 +29,7 @@
 (require 'init-org-mode)
 (require 'init-persistence)
 (require 'init-explorer)
+(require 'init-version-control)
 (require 'init-util)
 
 ;; disable backup files
