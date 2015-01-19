@@ -1,4 +1,6 @@
+;;----------------------------------------------------------------------------
 ;; flycheck
+;;----------------------------------------------------------------------------
 (require-package 'flycheck)
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -12,7 +14,9 @@
 
 (global-flycheck-mode t)
 
+;;----------------------------------------------------------------------------
 ;; flycheck errors on a tooltip (doesnt work on console)
+;;----------------------------------------------------------------------------
 (when (display-graphic-p (selected-frame))
   (eval-after-load 'flycheck
     '(custom-set-variables
@@ -22,10 +26,14 @@
 (define-key evil-normal-state-map "g[" 'flycheck-next-error)
 (define-key evil-normal-state-map "g]" 'flycheck-previous-error)
 
+;;----------------------------------------------------------------------------
 ;; flycheck using scalastyle
+;;----------------------------------------------------------------------------
 (setq flycheck-scalastyle-jar "~/.emacs.d/checkers/scalastyle.jar")
 
+;;----------------------------------------------------------------------------
 ;; flycheck using lintr
+;;----------------------------------------------------------------------------
 (load "~/.emacs.d/checkers/lintr.el")
 
 ;; todo dictionary for mispelling

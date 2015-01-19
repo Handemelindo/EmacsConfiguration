@@ -20,7 +20,6 @@
 
 (require 'init-package)
 (require 'init-language)
-(require 'init-appearance)
 (require 'init-auxiliary)
 (require 'init-evil)
 (require 'init-static-checker)
@@ -28,12 +27,10 @@
 (require 'init-helm)
 (require 'init-org-mode)
 (require 'init-persistence)
+(require 'init-appearance)
 (require 'init-explorer)
 ;(require 'init-version-control)
 (require 'init-util)
-
-;; disable backup files
-(setq make-backup-files nil)
 
 ;; disable scroll bar
 (scroll-bar-mode t)

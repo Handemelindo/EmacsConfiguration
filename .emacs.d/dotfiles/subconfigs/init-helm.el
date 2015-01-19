@@ -1,4 +1,6 @@
+;;----------------------------------------------------------------------------
 ;; helm settings (TAB in helm window for actions over selected items,
+;;----------------------------------------------------------------------------
 ;; C-SPC to select items)
 (require-package 'helm)
 (require-package 'helm-projectile)
@@ -24,12 +26,15 @@
                        helm-c-source-recentf
                        helm-c-source-locate)
                      "*helm-my-buffers*")))
-;;dynamically change cursor color
-(setq evil-emacs-state-cursor '("red" box))
-(setq evil-normal-state-cursor '("green" box))
-(setq evil-visual-state-cursor '("orange" box))
-(setq evil-insert-state-cursor '("red" bar))
-(setq evil-replace-state-cursor '("red" box))
-(setq evil-operator-state-cursor '("red" hollow))
+;;----------------------------------------------------------------------------
+;; Nicer naming of buffers for files with identical names
+;;----------------------------------------------------------------------------
+(require 'uniquify)
+(require 'uniquify)
+
+(setq uniquify-buffer-name-style 'reverse)
+(setq uniquify-separator " • ")
+(setq uniquify-after-kill-buffer-p t)
+(setq uniquify-ignore-buffers-re "^\\*")
 
 (provide 'init-helm)

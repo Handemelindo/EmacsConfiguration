@@ -1,4 +1,6 @@
+;;----------------------------------------------------------------------------
 ;; evil mode
+;;----------------------------------------------------------------------------
 (require-package 'evil)
 (require 'evil)
 (evil-mode t)
@@ -28,12 +30,16 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 						(evil-scroll-down nil)))
 
 
+;;----------------------------------------------------------------------------
 ;; evil surround
+;;----------------------------------------------------------------------------
 (require-package 'evil-surround)
 (require 'evil-surround)
 (global-evil-surround-mode t)
 
+;;----------------------------------------------------------------------------
 ;; evil args
+;;----------------------------------------------------------------------------
 ;; locate and load the package
 (require-package 'evil-args)
 (add-to-list 'load-path "path/to/evil-args")
@@ -50,32 +56,44 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; bind evil-jump-out-args
 (define-key evil-normal-state-map "K" 'evil-jump-out-args)
 
+;;----------------------------------------------------------------------------
 ;; evil exchange
+;;----------------------------------------------------------------------------
 (require-package 'evil-exchange)
 (require 'evil-exchange)
 (evil-exchange-install)
 
+;;----------------------------------------------------------------------------
 ;; evil matchit
+;;----------------------------------------------------------------------------
 (require-package 'evil-matchit)
 (require 'evil-matchit)
 (global-evil-matchit-mode t)
 
+;;----------------------------------------------------------------------------
 ;; evil nerd commenter
+;;----------------------------------------------------------------------------
 (require-package 'evil-nerd-commenter)
 (require 'evil-nerd-commenter)
 
+;;----------------------------------------------------------------------------
 ;; evil visualstar
+;;----------------------------------------------------------------------------
 (require-package 'evil-visualstar)
 (global-evil-visualstar-mode t)
 
+;;----------------------------------------------------------------------------
 ;; evil snipe
+;;----------------------------------------------------------------------------
 (require-package 'evil-snipe)
 (require 'evil-snipe)
 (global-evil-snipe-mode t)
 (evil-snipe-replace-evil)
 ;(evil-snipe-enable-nN)
 
+;;----------------------------------------------------------------------------
 ;; evil leader
+;;----------------------------------------------------------------------------
 (require-package 'evil-leader)
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -90,13 +108,17 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   "\\" 'evilnc-comment-operator
   "e" 'find-file)
 
+;;----------------------------------------------------------------------------
 ;; acer jumper
+;;----------------------------------------------------------------------------
 (require-package 'ace-jump-mode)
 (evil-leader/set-key "w" 'evil-ace-jump-word-mode)
 (evil-leader/set-key "j" 'evil-ace-jump-line-mode)
 (evil-leader/set-key "f" 'evil-ace-jump-char-mode)
 
+;;----------------------------------------------------------------------------
 ;; evil tabs
+;;----------------------------------------------------------------------------
 (require-package 'evil-tabs)
 (global-evil-tabs-mode t)
 (define-key evil-normal-state-map (kbd "C-w t") 'elscreen-create)
@@ -113,7 +135,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (define-key evil-normal-state-map "g8" (lambda() (interactive) (elscreen-goto 8)))
 (define-key evil-normal-state-map "g9" (lambda() (interactive) (elscreen-goto 9)))
 
+;;----------------------------------------------------------------------------
 ;; powerline evil mode
+;;----------------------------------------------------------------------------
 (require-package 'powerline-evil)
 (powerline-evil-vim-color-theme)
 

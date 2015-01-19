@@ -1,10 +1,14 @@
+;;----------------------------------------------------------------------------
 ;; project explorer
+;;----------------------------------------------------------------------------
 (require-package 'project-explorer)
 (after 'project-explorer
   (setq pe/cache-directory "~/.emacs.d/cache/project_explorer")
         (setq pe/omit-regex (concat pe/omit-regex "\\|single_emails")))
 
+;;----------------------------------------------------------------------------
 ;; dried and details
+;;----------------------------------------------------------------------------
 (require-package 'dired-details)
 (require-package 'dired-details+)
 

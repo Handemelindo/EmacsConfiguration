@@ -17,11 +17,15 @@
 
 ;; (setq org-mobile-inbox-for-pull (concat org-directory "/flagged.org"))
 
+;;----------------------------------------------------------------------------
 ;; automically add list
+;;----------------------------------------------------------------------------
 (require-package 'org-autolist)
 (add-hook 'org-mode-hook (lambda () (org-autolist-mode)))
 
+;;----------------------------------------------------------------------------
 ;; support UTF-8 bullets
+;;----------------------------------------------------------------------------
 (require-package 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-at-item-bullet-mode t)))
 

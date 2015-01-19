@@ -1,4 +1,6 @@
+;;----------------------------------------------------------------------------
 ;; use company
+;;----------------------------------------------------------------------------
 (require-package 'company)
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
@@ -11,7 +13,9 @@
       (company-complete-common)
           (indent-according-to-mode)))
 
+;;----------------------------------------------------------------------------
 ;; company ghc
+;;----------------------------------------------------------------------------
 (require-package 'company-ghc)
 (add-to-list 'company-backends 'company-ghc)
 
