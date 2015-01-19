@@ -24,9 +24,15 @@
   (add-hook 'after-save-hook 'byte-compile-current-buffer)
 
 ;;wekatime
-;(require-package 'wakatime-mode)
-;(global-wakatime-mode)
-;(setq wakatime-cli-path "C:\Python34\Lib\site-packages\wakatime\projects:)
-;(setq wakatime-api-key "68e6f764-194d-444e-a2ee-66f09ef1a93f")
+(require-package 'wakatime-mode)
+;(if (eq system-type 'windows-nt)
+    ;(setq wakatime-cli-path "C:\Python34\Scripts\wakatime.exe"))
+
+;(if (eq system-type 'gnu/linux)
+    ;(setq org-directory "/usr/bin/wakatime"))
+
+(setq wakatime-cli-path "~/.emacs.d/misc/wakatime-cli.py")
+(setq wakatime-api-key "68e6f764-194d-444e-a2ee-66f09ef1a93f")
+(global-wakatime-mode t)
 
 (provide 'init-util)
