@@ -19,6 +19,7 @@
              (expand-file-name "dotfiles/powerline" user-emacs-directory))
 
 (require 'init-package)
+
 (require 'init-language)
 (require 'init-auxiliary)
 (require 'init-evil)
@@ -26,15 +27,14 @@
 (require 'init-complete)
 (require 'init-helm)
 (require 'init-org-mode)
-(require 'init-persistence)
 (require 'init-appearance)
-(require 'init-explorer)
 ;(require 'init-version-control)
 ;(require 'init-project-mngt)
-(require 'init-util)
-(require 'init-themes)
 
-;; disable scroll bar
-(scroll-bar-mode t)
+(require 'init-util)
+(require 'init-persistence)
+(require 'init-explorer)
+(require 'init-csv)
+(require 'init-themes)
 
 (provide 'init)

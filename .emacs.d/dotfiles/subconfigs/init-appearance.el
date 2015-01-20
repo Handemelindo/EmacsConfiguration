@@ -1,4 +1,14 @@
 ;;----------------------------------------------------------------------------
+;; font setting
+;;----------------------------------------------------------------------------
+(require-package 'cl)
+(require 'cl)
+  (defun font-candidate (&rest fonts)
+     "Return existing font which first match."
+     (find-if (lambda (f) (find-font (font-spec :name f))) fonts))
+(set-face-attribute 'default nil :font (font-candidate '"Hermit-12:weight=normal" "DejaVu Sans Mono-12:weight=normal"))
+
+;;----------------------------------------------------------------------------
 ;; adjust terminal color
 ;;----------------------------------------------------------------------------
 (require-package 'color-theme-approximate)
@@ -27,6 +37,8 @@
 ;;----------------------------------------------------------------------------
 (require-package 'hl-line)
 (global-hl-line-mode)
+(require-package 'hl-line+)
+(flash-line-highlight)
 
 ;;----------------------------------------------------------------------------
 ;; highlight indent

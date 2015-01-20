@@ -1,8 +1,9 @@
 .emacs.d/saveplace
+.emacs.d/elpa
 .emacs.d/backups
 .emacs.d/cache
 ~$
-"^#.*#$"
+^#.*#$
 .emacs.d/session*
 # -*- mode: gitignore; -*-
 *~
