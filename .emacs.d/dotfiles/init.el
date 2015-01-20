@@ -30,7 +30,9 @@
 (require 'init-appearance)
 (require 'init-explorer)
 ;(require 'init-version-control)
+;(require 'init-project-mngt)
 (require 'init-util)
+(require 'init-themes)
 
 ;; disable scroll bar
 (scroll-bar-mode t)

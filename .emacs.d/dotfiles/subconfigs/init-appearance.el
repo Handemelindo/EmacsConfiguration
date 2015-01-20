@@ -11,14 +11,6 @@
   (invert-face 'default))
 
 ;;----------------------------------------------------------------------------
-;; cyborgpunk theme
-;;----------------------------------------------------------------------------
-(require-package 'cyberpunk-theme)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'cyberpunk)
-;; (setq molokai-theme-kit t)
-
-;;----------------------------------------------------------------------------
 ;; line number
 ;;----------------------------------------------------------------------------
 (require-package 'linum)

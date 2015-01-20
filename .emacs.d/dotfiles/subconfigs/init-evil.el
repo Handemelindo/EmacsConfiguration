@@ -112,9 +112,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; acer jumper
 ;;----------------------------------------------------------------------------
 (require-package 'ace-jump-mode)
-(evil-leader/set-key "w" 'evil-ace-jump-word-mode)
-(evil-leader/set-key "j" 'evil-ace-jump-line-mode)
-(evil-leader/set-key "f" 'evil-ace-jump-char-mode)
+(evil-leader/set-key ",w" 'evil-ace-jump-word-mode)
+(evil-leader/set-key ",j" 'evil-ace-jump-line-mode)
+(evil-leader/set-key ",f" 'evil-ace-jump-char-mode)
 
 ;;----------------------------------------------------------------------------
 ;; evil tabs
@@ -139,7 +139,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;; powerline evil mode
 ;;----------------------------------------------------------------------------
 (require-package 'powerline-evil)
-(powerline-evil-vim-color-theme)
+(powerline-evil-center-color-theme)
 
 ;; todo ace window
 

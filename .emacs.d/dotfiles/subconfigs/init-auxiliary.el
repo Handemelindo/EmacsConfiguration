@@ -40,6 +40,7 @@
     (format "%s -f %s/tags -eR %s" path-to-ctags (directory-file-name dir-name) (directory-file-name dir-name))))
 
 ;; smex
+;; paredit
 ;; todo add killing buffer visualization
 ;; todo add RSS reader
 ;; todo add expand-region
