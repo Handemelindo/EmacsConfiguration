@@ -31,7 +31,7 @@
   (interactive)
   (color-theme-sanityinc-tomorrow-blue))
 
-(defun balance-theme ()
+(defun balanced-theme ()
   "Activate a light color theme."
   (interactive)
   (color-theme-sanityinc-tomorrow-eighties))

@@ -33,9 +33,9 @@
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
-;; (require 'server)
-;; (unless (server-running-p)
-;;   (server-start))
+;(require 'server)
+;(unless (server-running-p)
+  ;(server-start))
 
 ;;----------------------------------------------------------------------------
 ;; disable scroll bar
