@@ -49,9 +49,22 @@
 (setq auto-mode-alist
       (cons '("\\.\\(md\\|markdown\\)\\'" . markdown-mode) auto-mode-alist))
 
+;;----------------------------------------------------------------------------
+;; ruby
+;;----------------------------------------------------------------------------
+(require-package 'inf-ruby)
+(require-package 'ruby-mode)
+
+;;----------------------------------------------------------------------------
+;; latex
+;;----------------------------------------------------------------------------
+(require-package 'auctex)
+
+;;----------------------------------------------------------------------------
+;; todo julia
+;;----------------------------------------------------------------------------
+
 ;; todo add modern regular expression support like visual-regexp-steroids
-;; todo julia support
-;; todo ruby support
 ;; todo java support
 ;; todo prolog support
 ;; todo io support

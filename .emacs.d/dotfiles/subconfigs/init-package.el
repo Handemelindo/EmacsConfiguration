@@ -19,6 +19,21 @@
     (package-install package)))
 
 ;;----------------------------------------------------------------------------
+;; maybe require
+;;----------------------------------------------------------------------------
+(defun maybe-require-package (package &optional min-version no-refresh)
+  "Try to install PACKAGE, and return non-nil if successful.
+In the event of failure, return nil and print a warning message.
+Optionally require MIN-VERSION.  If NO-REFRESH is non-nil, the
+available package lists will not be re-downloaded in order to
+locate PACKAGE."
+  (condition-case err
+      (require-package package min-version no-refresh)
+    (error
+     (message "Couldn't install package `%s': %S" package err)
+     nil)))
+
+;;----------------------------------------------------------------------------
 ;; Handier way to add modes to auto-mode-alist
 ;;----------------------------------------------------------------------------
 (defun add-auto-mode (mode &rest patterns)
@@ -67,5 +82,16 @@
     (if (tramp-tramp-file-p file-name)
         (error "Cannot open tramp file")
       (browse-url (concat "file://" file-name)))))
+
+;;----------------------------------------------------------------------------
+;; after load macro
+;;----------------------------------------------------------------------------
+(if (fboundp 'with-eval-after-load)
+    (defalias 'after-load 'with-eval-after-load)
+  (defmacro after-load (feature &rest body)
+    "After FEATURE is loaded, evaluate BODY."
+    (declare (indent defun))
+    `(eval-after-load ,feature
+       '(progn ,@body))))
 
 (provide 'init-package)

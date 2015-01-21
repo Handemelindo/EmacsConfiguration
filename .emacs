@@ -21,3 +21,4 @@
  )
 
 (require 'init)
+(put 'downcase-region 'disabled nil)

@@ -1,10 +1,11 @@
-.emacs.d/saveplace
-.emacs.d/elpa
-.emacs.d/backups
-.emacs.d/cache
+*
+!.emacs
+!.gitignore
+!.emacs.d/dotfile
+!.emacs.d/misc
+!.emacs.d/checkers
 ~$
 ^#.*#$
-.emacs.d/session*
 # -*- mode: gitignore; -*-
 *~
 \#*\#
