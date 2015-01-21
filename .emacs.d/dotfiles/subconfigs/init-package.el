@@ -15,7 +15,8 @@
   "Install given PACKAGE."
   (unless (package-installed-p package)
     (unless (assoc package package-archive-contents)
-      (package-refresh-contents))))
+      (package-refresh-contents))
+    (package-install package)))
 
 ;;----------------------------------------------------------------------------
 ;; Handier way to add modes to auto-mode-alist
