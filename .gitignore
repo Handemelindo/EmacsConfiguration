@@ -1,7 +1,8 @@
 *
 !.emacs
 !.gitignore
-!.emacs.d/dotfile
+!.emacs.d/dotfile/
+!.emacs.d/dotfile/subconfigs/
 !.emacs.d/misc
 !.emacs.d/checkers
 ~$
