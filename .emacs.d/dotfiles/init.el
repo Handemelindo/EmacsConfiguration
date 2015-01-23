@@ -19,6 +19,7 @@
              (expand-file-name "dotfiles/powerline" user-emacs-directory))
 
 (require 'init-package)
+(require 'init-benchmarking)
 (require 'init-language)
 (require 'init-auxiliary)
 (require 'init-evil)

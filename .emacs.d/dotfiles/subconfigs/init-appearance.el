@@ -192,7 +192,7 @@
             (setq line-spacing 0)))
 
 ;;----------------------------------------------------------------------------
-;;dynamically change cursor color
+;; dynamically change cursor color
 ;;----------------------------------------------------------------------------
 (setq evil-emacs-state-cursor '("red" box))
 (setq evil-normal-state-cursor '("green" box))
@@ -227,7 +227,6 @@
 (global-set-key "\C-x|" 'split-window-horizontally-instead)
 (global-set-key "\C-x_" 'split-window-vertically-instead)
 
-
 ;; Borrowed from http://postmomentum.ch/blog/201304/blog-on-emacs
 (defun sanityinc/split-window()
   "Split the window to see the most recent buffer in the other window.
