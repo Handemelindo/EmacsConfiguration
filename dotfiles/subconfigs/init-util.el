@@ -17,7 +17,7 @@
 (setq guide-key/guide-key-sequence '("C-x" "C-c" "C-x n"))
 ;(setq guide-key/highlight-command-regexp "rectangle")
 (guide-key-mode 1)
-(diminish 'guide-key-mode)
+;(diminish 'guide-key-mode)
 
 ;;----------------------------------------------------------------------------
 ;; auto compilation from http://ergoemacs.org/emacs/emacs_byte_compile.html

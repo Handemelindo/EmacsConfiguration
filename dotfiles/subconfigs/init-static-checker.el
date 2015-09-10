@@ -22,14 +22,10 @@
     '(custom-set-variables
       '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages))))
 
-(define-key evil-normal-state-map "g!" 'flycheck-list-errors)
-(define-key evil-normal-state-map "g[" 'flycheck-next-error)
-(define-key evil-normal-state-map "g]" 'flycheck-previous-error)
-
 ;;----------------------------------------------------------------------------
 ;; flycheck using scalastyle
 ;;----------------------------------------------------------------------------
-(setq flycheck-scalastyle-jar "~/.emacs.d/checkers/scalastyle.jar")
+;;(setq flycheck-scalastyle-jar "~/.emacs.d/checkers/scalastyle.jar")
 
 ;;----------------------------------------------------------------------------
 ;; flycheck using lintr

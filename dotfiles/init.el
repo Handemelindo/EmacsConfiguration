@@ -22,10 +22,10 @@
 (require 'init-benchmarking)
 (require 'init-language)
 (require 'init-auxiliary)
-(require 'init-evil)
 (require 'init-static-checker)
 (require 'init-complete)
 (require 'init-helm)
+(require 'init-evil)
 (require 'init-org-mode)
 (require 'init-appearance)
 (require 'init-version-control)
@@ -38,5 +38,6 @@
 (require 'init-explorer)
 (require 'init-csv)
 (require 'init-themes)
+(require 'init-cmd)
 
 (provide 'init)

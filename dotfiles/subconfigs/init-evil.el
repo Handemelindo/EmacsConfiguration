@@ -122,11 +122,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   "cv" 'evilnc-toggle-invert-comment-line-by-line
   "\\" 'evilnc-comment-operator
   "e" 'find-file
-;;  "+" 'evil-numbers/inc-at-pt
-;;  "-" 'evil-numbers/dec-at-pt
-;;  "p" 'projectile-command-map
-;;  "u" 'undo-tree-visualize
-;;  "b" 'ibuffer
+  "+" 'evil-numbers/inc-at-pt
+  "-" 'evil-numbers/dec-at-pt
+  "p" 'projectile-command-map
+  "u" 'undo-tree-visualize
+  "b" 'ibuffer
   )
 
 ;;----------------------------------------------------------------------------
@@ -159,6 +159,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 ;;----------------------------------------------------------------------------
 (require-package 'powerline-evil)
 (powerline-evil-center-color-theme)
+
+
+(define-key evil-normal-state-map "g!" 'flycheck-list-errors)
+(define-key evil-normal-state-map "g[" 'flycheck-next-error)
+(define-key evil-normal-state-map "g]" 'flycheck-previous-error)
+
 
 ;; todo ace window
 

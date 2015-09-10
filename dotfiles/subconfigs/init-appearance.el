@@ -6,7 +6,7 @@
   (defun font-candidate (&rest fonts)
      "Return existing font which first match."
      (find-if (lambda (f) (find-font (font-spec :name f))) fonts))
-(set-face-attribute 'default nil :font (font-candidate '"Hermit-12:weight=normal" "DejaVu Sans Mono-12:weight=normal"))
+(set-face-attribute 'default nil :font (font-candidate '"Hermit-12:weight=normal" "DejaVu Sans Mono-12:weight=normal" "Source Code Pro-12:weight=normal"))
 
 ;;----------------------------------------------------------------------------
 ;; adjust terminal color
