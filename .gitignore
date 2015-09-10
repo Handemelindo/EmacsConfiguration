@@ -1,36 +1,11 @@
 *
-!.emacs
+
+# Allow
 !.gitignore
-!.emacs.d/dotfile/
-!.emacs.d/dotfile/subconfigs/
-!.emacs.d/misc
-!.emacs.d/checkers
+!dotfiles/**
+!misc/**
+!checkers/**
+!*/
+
+elpa
 ~$
-^#.*#$
-# -*- mode: gitignore; -*-
-*~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
-auto-save-list
-tramp
-.\#*
-
-# Org-mode.org-id-locations
-*_archive
-
-# flymake-mode*_flymake.*
-
-# eshell files/eshell/history
-/eshell/lastdir
-
-# elpa packages
-/elpa/
-
-# reftex files*.relative
-# AUCTeX auto folder
-/auto/
-
-# cask packages
-.cask/
