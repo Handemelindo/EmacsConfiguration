@@ -88,12 +88,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (require-package 'evil-numbers)
 
 ;;----------------------------------------------------------------------------
-;; evil org
-;;----------------------------------------------------------------------------
-(require-package 'evil-org)
-(require 'evil-org)
-
-;;----------------------------------------------------------------------------
 ;; evil nerd commenter; never leave it.
 ;;----------------------------------------------------------------------------
 (require-package 'evil-nerd-commenter)
@@ -128,11 +122,12 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   "cv" 'evilnc-toggle-invert-comment-line-by-line
   "\\" 'evilnc-comment-operator
   "e" 'find-file
-  "+" 'evil-numbers/inc-at-pt
-  "-" 'evil-numbers/dec-at-pt
-  "p" 'projectile-command-map
-  "u" 'undo-tree-visualize
-  "b" 'ibuffer)
+;;  "+" 'evil-numbers/inc-at-pt
+;;  "-" 'evil-numbers/dec-at-pt
+;;  "p" 'projectile-command-map
+;;  "u" 'undo-tree-visualize
+;;  "b" 'ibuffer
+  )
 
 ;;----------------------------------------------------------------------------
 ;; acer easymotion; enhanced motion key.

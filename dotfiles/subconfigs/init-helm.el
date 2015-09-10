@@ -30,7 +30,12 @@
 ;; Nicer naming of buffers for files with identical names
 ;;----------------------------------------------------------------------------
 (require 'uniquify)
-(require 'uniquify)
+
+;;----------------------------------------------------------------------------
+;; immediately open dired while switching projects
+;;----------------------------------------------------------------------------
+;;(projectile-global-mode)
+;;(setq projectile-switch-project-ation 'projectile-dired)
 
 (setq uniquify-buffer-name-style 'reverse)
 (setq uniquify-separator " • ")

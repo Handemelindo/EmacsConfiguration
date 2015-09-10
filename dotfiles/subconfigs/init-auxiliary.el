@@ -4,12 +4,6 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;;----------------------------------------------------------------------------
-;; immediately open dired while switching projects
-;;----------------------------------------------------------------------------
-(projectile-global-mode)
-(setq projectile-switch-project-ation 'projectile-dired)
-
-;;----------------------------------------------------------------------------
 ;; shortcut for eshell
 ;;----------------------------------------------------------------------------
 (global-set-key [f4] 'eshell)

@@ -157,6 +157,12 @@
      ;; (ruby . t)
      (haskell . t))))
 
+;;----------------------------------------------------------------------------
+;; evil org
+;;----------------------------------------------------------------------------
+(require-package 'evil-org)
+(require 'evil-org)
+
 ;; todo add evernote support
 ;; todo add org-jira
 ;; todo add org mail
